@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id"> <!-- Sesuaikan dengan bahasa aplikasi -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> <!-- Lebih mobile-friendly -->
+  <meta name="theme-color" content="#3367D6" /> <!-- Warna tema yang konsisten dengan manifest -->
+  
+  <!-- Ikon & PWA Metadata -->
+  <link rel="icon" href="/favicon.ico" /> <!-- Fallback untuk semua browser -->
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" /> <!-- Untuk modern browser -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> <!-- Untuk iOS -->
+  <link rel="manifest" href="/manifest.webmanifest" /> <!-- Gunakan .webmanifest -->
+
+  <!-- SEO Basics -->
+  <meta name="description" content="Aplikasi diskusi dan chat Getnews" />
+  <title>Dapatkan kabar keluarga dan teman anda</title> <!-- Judul spesifik -->
+
+  <!-- Preload Resources -->
+  <link rel="preload" href="/src/main.jsx" as="script" />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  
+  <!-- Fallback untuk JS disabled -->
+  <noscript>
+    <style>
+      #root { display: none; }
+      body::before {
+        content: "Aplikasi membutuhkan JavaScript untuk berfungsi";
+        display: block;
+        padding: 2rem;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    </style>
+  </noscript>
+</body>
+</html>
